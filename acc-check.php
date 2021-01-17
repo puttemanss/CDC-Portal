@@ -13,7 +13,7 @@ $Acc_UserID = $_SESSION['S_UserID'];
 try {
     $conn = new PDO("sqlsrv:Server=$servername;database=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = $conn->prepare("SELECT * FROM [Users].[User] WHERE UserID = $Acc_UserID");
+    $query = $conn->prepare("EXEC [Users].[sp_Select_User_Info] $Acc_UserID");
     $query->execute();
 
     while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
@@ -25,6 +25,12 @@ try {
             header('location: page-login.php?rd=1300');
         }
         else{
+            $_SESSION['S_UserID'] = $result['UserID'];
+            $_SESSION['S_FirstName'] = $result['FirstName'];
+            $_SESSION['S_LastName'] = $result['LastName'];
+            $_SESSION['S_Name'] = $result['FirstName'] . " " . $result['LastName'];
+            $_SESSION['S_Email'] = $result['Email'];
+            $_SESSION['S_Hash'] = $result['Hash'];
             
         }
     }

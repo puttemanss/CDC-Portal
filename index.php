@@ -61,8 +61,8 @@ include('acc-check.php');
             <ul class="nav nav-tabs">
                 <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#hr_menu">HR</a></li>
                 <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#project_menu">Project</a></li>
-                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#sub_menu"><i class="icon-grid"></i></a></li>                
-                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#setting"><i class="icon-settings"></i></a></li>
+                <!--<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#sub_menu"><i class="icon-grid"></i></a></li>                
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#setting"><i class="icon-settings"></i></a></li>-->
             </ul>
                 
             <!-- Tab panes -->
@@ -78,10 +78,11 @@ include('acc-check.php');
                             <li>
                                 <a href="#Employees" class="has-arrow"><i class="icon-users"></i><span>Employees</span></a>
                                 <ul>
+                                    <li><a href="page-profile2.php">My Profile</a></li>
                                     <li><a href="emp-all.php">All Employees</a></li>
-                                    <li><a href="emp-leave.php">Leave Requests</a></li>
+                                    <!--li><a href="emp-leave.php">Leave Requests</a></li>
                                     <li><a href="emp-attendance.php">Attendance</a></li>
-                                    <li><a href="emp-departments.php">Departments</a></li>
+                                    <li><a href="emp-departments.php">Departments</a></li>-->
                                 </ul>
                             </li>
                             <li>
@@ -127,222 +128,33 @@ include('acc-check.php');
                     <nav class="sidebar-nav">
                         <ul class="main-menu metismenu">
                             <li><a href="index2.php"><i class="icon-speedometer"></i><span>Dashboard</span></a></li>
-                            <li><a href="app-inbox.php"><i class="icon-envelope"></i>Inbox App</a></li>
-                            <li><a href="app-chat.php"><i class="icon-bubbles"></i>Chat App</a></li>
+                            <!--<li><a href="app-inbox.php"><i class="icon-envelope"></i>Inbox App</a></li>
+                            <li><a href="app-chat.php"><i class="icon-bubbles"></i>Chat App</a></li>-->
                             <li>
-                                <a href="#Projects" class="has-arrow"><i class="icon-list"></i><span>Projects</span></a>
+                                <a href="project-list.php"><i class="icon-list"></i><span>Projects</span></a>
+                                <!--<a href="#Projects" class="has-arrow"><i class="icon-list"></i><span>Projects</span></a>
                                 <ul>
                                     <li><a href="project-add.php">Add Projects</a></li>
                                     <li><a href="project-list.php">Projects List</a></li>
                                     <li><a href="project-grid.php">Projects Grid</a></li>
-                                    <li><a href="project-detail.php">Projects Detail</a></li>                                    
-                                </ul>
+                                    <li><a href="project-detail.php">Projects Detail</a></li>                                  
+                                </ul>-->  
                             </li>
                             <li>
-                                <a href="#Clients" class="has-arrow"><i class="icon-user"></i><span>Clients</span></a>
+                                <a href="client-list.php"><i class="icon-user"></i><span>Clients</span></a>
+                                <!--<a href="#Clients" class="has-arrow"><i class="icon-user"></i><span>Clients</span></a>
                                 <ul>
                                     <li><a href="client-add.php">Add Clients</a></li>
                                     <li><a href="client-list.php">Clients List</a></li>
                                     <li><a href="client-detail.php">Clients Detail</a></li>
-                                </ul>
+                                </ul>-->
                             </li>
-                            <li><a href="project-team.php"><i class="icon-users"></i>Team</a></li>
+                            <!--<li><a href="project-team.php"><i class="icon-users"></i>Team</a></li>-->
                             <li><a href="app-taskboard.php"><i class="icon-tag"></i>Taskboard</a></li>
                             <li><a href="app-tickets.php"><i class="icon-screen-tablet"></i>Tickets</a></li>
                         </ul>                        
                     </nav>                    
-                </div>
-                <div class="tab-pane animated fadeIn" id="sub_menu">
-                    <nav class="sidebar-nav">
-                        <ul class="main-menu metismenu">
-                            <li>
-                                <a href="#Blog" class="has-arrow"><i class="icon-globe"></i> <span>Blog</span></a>
-                                <ul>                                    
-                                    <li><a href="blog-dashboard.php">Dashboard</a></li>
-                                    <li><a href="blog-post.php">New Post</a></li>
-                                    <li><a href="blog-list.php">Blog List</a></li>
-                                    <li><a href="blog-details.php">Blog Detail</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#FileManager" class="has-arrow"><i class="icon-folder"></i> <span>File Manager</span></a>
-                                <ul>                                    
-                                    <li><a href="file-dashboard.php">Dashboard</a></li>
-                                    <li><a href="file-documents.php">Documents</a></li>
-                                    <li><a href="file-media.php">Media</a></li>
-                                    <li><a href="file-images.php">Images</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#Widgets" class="has-arrow"><i class="icon-puzzle"></i><span>Widgets</span></a>
-                                <ul>
-                                    <li><a href="widgets-statistics.php">Statistics Widgets</a></li>
-                                    <li><a href="widgets-data.php">Data Widgets</a></li>
-                                    <li><a href="widgets-chart.php">Chart Widgets</a></li>
-                                    <li><a href="widgets-weather.php">Weather Widgets</a></li>
-                                    <li><a href="widgets-social.php">Social Widgets</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#Pages" class="has-arrow"><i class="icon-docs"></i><span>Extra Pages</span></a>
-                                <ul>
-                                    <li><a href="page-blank.php">Blank Page</a> </li>
-                                    <li><a href="page-profile2.php">Profile</a></li>
-                                    <li><a href="page-gallery.php">Image Gallery <span class="badge badge-default float-right">v1</span></a> </li>
-                                    <li><a href="page-gallery2.php">Image Gallery <span class="badge badge-warning float-right">v2</span></a> </li>
-                                    <li><a href="page-timeline.php">Timeline</a></li>
-                                    <li><a href="page-timeline-h.php">Horizontal Timeline</a></li>
-                                    <li><a href="page-pricing.php">Pricing</a></li>
-                                    <li><a href="page-invoices.php">Invoices</a></li>
-                                    <li><a href="page-invoices2.php">Invoices <span class="badge badge-warning float-right">v2</span></a></li>
-                                    <li><a href="page-search-results.php">Search Results</a></li>
-                                    <li><a href="page-helper-class.php">Helper Classes</a></li>
-                                    <li><a href="page-maintenance.php">Maintenance</a></li>
-                                    <li><a href="page-testimonials.php">Testimonials</a></li>
-                                    <li><a href="page-faq.php">FAQs</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#uiElements" class="has-arrow"><i class="icon-diamond"></i> <span>UI Elements</span></a>
-                                <ul>
-                                    <li><a href="ui-typography.php">Typography</a></li>
-                                    <li><a href="ui-tabs.php">Tabs</a></li>
-                                    <li><a href="ui-buttons.php">Buttons</a></li>
-                                    <li><a href="ui-bootstrap.php">Bootstrap UI</a></li>
-                                    <li><a href="ui-icons.php">Icons</a></li>
-                                    <li><a href="ui-notifications.php">Notifications</a></li>
-                                    <li><a href="ui-colors.php">Colors</a></li>
-                                    <li><a href="ui-dialogs.php">Dialogs</a></li>                                    
-                                    <li><a href="ui-list-group.php">List Group</a></li>
-                                    <li><a href="ui-media-object.php">Media Object</a></li>
-                                    <li><a href="ui-modals.php">Modals</a></li>
-                                    <li><a href="ui-nestable.php">Nestable</a></li>
-                                    <li><a href="ui-progressbars.php">Progress Bars</a></li>
-                                    <li><a href="ui-range-sliders.php">Range Sliders</a></li>
-                                    <li><a href="ui-treeview.php">Treeview</a></li>
-                                </ul>
-                            </li>                            
-                            <li>
-                                <a href="#forms" class="has-arrow"><i class="icon-pencil"></i> <span>Forms</span></a>
-                                <ul>
-                                    <li><a href="forms-validation.php">Form Validation</a></li>
-                                    <li><a href="forms-advanced.php">Advanced Elements</a></li>
-                                    <li><a href="forms-basic.php">Basic Elements</a></li>
-                                    <li><a href="forms-wizard.php">Form Wizard</a></li>                                    
-                                    <li><a href="forms-dragdropupload.php">Drag &amp; Drop Upload</a></li>                                    
-                                    <li><a href="forms-cropping.php">Image Cropping</a></li>
-                                    <li><a href="forms-summernote.php">Summernote</a></li>
-                                    <li><a href="forms-editors.php">CKEditor</a></li>
-                                    <li><a href="forms-markdown.php">Markdown</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#Tables" class="has-arrow"><i class="icon-tag"></i> <span>Tables</span></a>
-                                <ul>
-                                    <li><a href="table-basic.php">Tables Example<span class="badge badge-info float-right">New</span></a> </li>
-                                    <li><a href="table-normal.php">Normal Tables</a> </li>
-                                    <li><a href="table-jquery-datatable.php">Jquery Datatables</a> </li>
-                                    <li><a href="table-editable.php">Editable Tables</a> </li>
-                                    <li><a href="table-color.php">Tables Color</a> </li>
-                                    <li><a href="table-filter.php">Table Filter <span class="badge badge-info float-right">New</span></a> </li>
-                                    <li><a href="table-dragger.php">Table dragger <span class="badge badge-info float-right">New</span></a> </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#charts" class="has-arrow"><i class="icon-bar-chart"></i> <span>Charts</span></a>
-                                <ul>
-                                    <li><a href="chart-morris.php">Morris</a> </li>
-                                    <li><a href="chart-flot.php">Flot</a> </li>
-                                    <li><a href="chart-chartjs.php">ChartJS</a> </li>                                    
-                                    <li><a href="chart-jquery-knob.php">Jquery Knob</a> </li>                                        
-                                    <li><a href="chart-sparkline.php">Sparkline Chart</a></li>
-                                    <li><a href="chart-peity.php">Peity</a></li>
-                                    <li><a href="chart-c3.php">C3 Charts</a></li>
-                                    <li><a href="chart-gauges.php">Gauges</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#Maps" class="has-arrow"><i class="icon-map"></i> <span>Maps</span></a>
-                                <ul>
-                                    <li><a href="map-google.php">Google Map</a></li>
-                                    <li><a href="map-yandex.php">Yandex Map</a></li>
-                                    <li><a href="map-jvectormap.php">jVector Map</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="tab-pane animated fadeIn" id="setting">
-                    <div class="p-l-15 p-r-15">
-                        <h6>Choose Skin</h6>
-                        <ul class="choose-skin list-unstyled">
-                            <li data-theme="purple">
-                                <div class="purple"></div>
-                                <span>Purple</span>
-                            </li>                   
-                            <li data-theme="blue">
-                                <div class="blue"></div>
-                                <span>Blue</span>
-                            </li>
-                            <li data-theme="cyan">
-                                <div class="cyan"></div>
-                                <span>Cyan</span>
-                            </li>
-                            <li data-theme="green">
-                                <div class="green"></div>
-                                <span>Green</span>
-                            </li>
-                            <li data-theme="orange" class="active">
-                                <div class="orange"></div>
-                                <span>Orange</span>
-                            </li>
-                            <li data-theme="blush">
-                                <div class="blush"></div>
-                                <span>Blush</span>
-                            </li>
-                        </ul>
-                        <hr>
-                        <h6>General Settings</h6>
-                        <ul class="setting-list list-unstyled">
-                            <li>
-                                <label class="fancy-checkbox">
-                                    <input type="checkbox" name="checkbox">
-                                    <span>Report Panel Usag</span>
-                                </label>
-                            </li>
-                            <li>
-                                <label class="fancy-checkbox">
-                                    <input type="checkbox" name="checkbox">
-                                    <span>Email Redirect</span>
-                                </label>
-                            </li>
-                            <li>
-                                <label class="fancy-checkbox">
-                                    <input type="checkbox" name="checkbox" checked>
-                                    <span>Notifications</span>
-                                </label>                      
-                            </li>
-                            <li>
-                                <label class="fancy-checkbox">
-                                    <input type="checkbox" name="checkbox" checked>
-                                    <span>Auto Updates</span>
-                                </label>
-                            </li>
-                            <li>
-                                <label class="fancy-checkbox">
-                                    <input type="checkbox" name="checkbox">
-                                    <span>Offline</span>
-                                </label>
-                            </li>
-                            <li>
-                                <label class="fancy-checkbox">
-                                    <input type="checkbox" name="checkbox" checked>
-                                    <span>Location Permission</span>
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>             
+                </div>           
             </div>          
         </div>
     </div>

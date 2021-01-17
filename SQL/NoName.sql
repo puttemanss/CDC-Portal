@@ -25,3 +25,28 @@ BEGIN
 		SELECT * FROM [Users].[User] WHERE Email = @Email AND Password = @Password;
 	END
 GO
+
+CREATE PROCEDURE [Users].[sp_Select_Gender]
+	--EXEC [Users].[sp_Select_Gender]
+AS
+	BEGIN
+		SELECT * FROM [Users].[Gender]
+	END
+GO
+
+CREATE PROCEDURE [Users].[sp_Select_Marital_Status]
+	--EXEC [Users].[sp_Select_Marital_Status]
+AS
+	BEGIN
+		SELECT * FROM [Users].[Marital_Status]
+	END
+GO
+
+CREATE PROCEDURE [Users].[sp_Select_User_Info]
+	--EXEC [Users].[sp_Select_User_Info]
+	@UserID int
+AS
+	BEGIN
+		SELECT * FROM [Users].[User] WHERE UserID = @UserID
+	END
+GO
