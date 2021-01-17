@@ -61,8 +61,6 @@ include('acc-check.php');
             <ul class="nav nav-tabs">
                 <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#hr_menu">HR</a></li>
                 <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#project_menu">Project</a></li>
-                <!--<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#sub_menu"><i class="icon-grid"></i></a></li>                
-                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#setting"><i class="icon-settings"></i></a></li>-->
             </ul>
                 
             <!-- Tab panes -->

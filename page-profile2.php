@@ -158,8 +158,6 @@ try {
             <ul class="nav nav-tabs">
                 <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#hr_menu">HR</a></li>
                 <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#project_menu">Project</a></li>
-                <!--<li class="nav-item"><a class="nav-link " data-toggle="tab" href="#sub_menu"><i class="icon-grid"></i></a></li>                
-                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#setting"><i class="icon-settings"></i></a></li>-->
             </ul>
                 
             <!-- Tab panes -->
@@ -264,7 +262,7 @@ try {
                         <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a> User Profile</h2>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.php"><i class="icon-home"></i></a></li>
-                            <li class="breadcrumb-item">Users</li>
+                            <li class="breadcrumb-item">Employee</li>
                             <li class="breadcrumb-item active">User Profile</li>
                         </ul>
                     </div>            
@@ -286,16 +284,6 @@ try {
                     <div class="card">
                         <div class="header">
                             <h2>Info</h2>
-                            <ul class="header-dropdown">
-                                <li class="dropdown">
-                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
-                                    <ul class="dropdown-menu dropdown-menu-right animated bounceIn">
-                                        <li><a href="javascript:void(0);">Action</a></li>
-                                        <li><a href="javascript:void(0);">Another Action</a></li>
-                                        <li><a href="javascript:void(0);">Something else</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
                         </div>
                         <div class="body">
                             <small class="text-muted">Address: </small>
