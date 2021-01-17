@@ -81,14 +81,14 @@ if(isset($_GET['email'])) {
         session_destroy();
         echo '<script>swal("Oops...", "Your account has not yet been activated. Please do this first!", "error");</script>';
     }
-    if($_GET["rd"] == "9000")
+    else if($_GET["rd"] == "9000")
     {   
         session_start();
         session_unset();
         session_destroy();
         echo '<script>swal("Good job!", "You have been successfully logged out!", "success");</script>';
     }
-    if($_GET["rd"] == "1300")
+    else if($_GET["rd"] == "1300")
     {   
         session_start();
         session_unset();

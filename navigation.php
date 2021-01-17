@@ -9,13 +9,12 @@
             </div>
             
             <div class="navbar-right">           
-
                 <div id="navbar-menu">
                     <ul class="nav navbar-nav">                        
                         <li><a href="app-events.php" class="icon-menu d-none d-sm-block d-md-none d-lg-block"><i class="icon-calendar"></i></a></li>
                         <li><a href="app-chat.php" class="icon-menu d-none d-sm-block"><i class="icon-bubbles"></i></a></li>
-                        <li><a href="app-inbox.php" class="icon-menu d-none d-sm-block"><i class="icon-envelope"></i><span class="notification-dot"></span></a></li>
-                        <li class="dropdown">
+                        <!--<li><a href="app-inbox.php" class="icon-menu d-none d-sm-block"><i class="icon-envelope"></i><span class="notification-dot"></span></a></li>-->
+                        <!--<li class="dropdown">
                             <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
                                 <i class="icon-bell"></i>
                                 <span class="notification-dot"></span>
@@ -75,7 +74,7 @@
                                     </a>
                                 </li>
                                 <li class="footer"><a href="javascript:void(0);" class="more">See all notifications</a></li>
-                            </ul>
+                            </ul>-->
                         </li>
                         <li class="dropdown">
                             <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown"><i class="icon-equalizer"></i></a>
@@ -91,7 +90,7 @@
                                 <li><a href="javascript:void(0);"><i class="icon-refresh"></i> <span>Renewals</span></a></li>
                             </ul>
                         </li>
-                        <li><a href="page-login.php" class="icon-menu"><i class="icon-login"></i></a></li>
+                        <li><a href="page-login.php?rd=9000" class="icon-menu"><i class="icon-login"></i></a></li>
                     </ul>
                 </div>
             </div>
