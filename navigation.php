@@ -8,11 +8,11 @@
                 <a href="index.php"><img src="assets/images/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>                
             </div>
             
-            <div class="navbar-right">           
+            <div class="navbar-right d-none d-sm-block">           
                 <div id="navbar-menu">
                     <ul class="nav navbar-nav">                        
                         <li><a href="app-events.php" class="icon-menu d-none d-sm-block d-md-none d-lg-block"><i class="icon-calendar"></i></a></li>
-                        <li><a href="app-chat.php" class="icon-menu d-none d-sm-block"><i class="icon-bubbles"></i></a></li>
+                        <!--<li><a href="app-chat.php" class="icon-menu d-none d-sm-block"><i class="icon-bubbles"></i></a></li>-->
                         <!--<li><a href="app-inbox.php" class="icon-menu d-none d-sm-block"><i class="icon-envelope"></i><span class="notification-dot"></span></a></li>-->
                         <!--<li class="dropdown">
                             <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
@@ -77,7 +77,7 @@
                             </ul>-->
                         </li>
                         <li class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown"><i class="icon-equalizer"></i></a>
+                            <a href="javascript:void(0);" class="dropdown-toggle icon-menufile" data-toggle="dropdown"><i class="icon-equalizer"></i></a>
                             <ul class="dropdown-menu user-menu menu-icon animated bounceIn">
                                 <li class="menu-heading">ACCOUNT SETTINGS</li>
                                 <li><a href="javascript:void(0);"><i class="icon-note"></i> <span>Basic</span></a></li>
