@@ -9,6 +9,19 @@ CREATE PROCEDURE [Users].[sp_Register User]
 	@Active int = 1
 AS
 BEGIN
+SET NOCOUNT ON
 	INSERT INTO [Users].[User] ([FirstName],[LastName],[Email],[Password],[Hash],[Active]) VALUES('@FirstName','@LastName','@Email','@Password','@Hash','@Active');
 END
-GO;
+GO
+
+
+--Login (page-login.php)
+CREATE PROCEDURE [Users].[sp_Page_Login]
+	--EXEC [Users].[sp_Page_Login] 'Email', 'Password'
+	@Email varchar(255),
+	@Password varchar(255),
+AS
+BEGIN
+		SELECT * FROM [Users].[User] WHERE Email = @Email AND Password = @Password;
+	END
+GO

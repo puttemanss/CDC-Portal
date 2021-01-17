@@ -108,7 +108,7 @@ if(isset($_GET['email'])) {
         try {
             $conn = new PDO("sqlsrv:Server=$servername;database=$dbname", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $query = $conn->prepare("SELECT * FROM [Users].[User] WHERE Email ='$P_Email' AND Password ='$P_Password'");
+            $query = $conn->prepare("EXEC [Users].[sp_Page_Login] '$P_Email', '$P_Password'");
             $query->execute();
             if ($query->rowCount() === 0) {
                 echo '<script>swal("Oops...", "The combination of email and password is not recognized. Try again!", "error");</script>';
