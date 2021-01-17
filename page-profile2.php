@@ -67,26 +67,9 @@ try {
 
       $conn = new PDO("sqlsrv:Server=$servername;database=$dbname", $username, $password);
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      $sql = "UPDATE [Users].[User]
-      SET [Date_Edit] = '$U_P_Date'
-         ,[FirstName] = '$U_P_FirstName'
-         ,[LastName] = '$U_P_LastName'
-         ,[Email] = '$U_P_Email'
-         ,[Phone] = '$U_P_Phone'
-         ,[Gender] = '$U_P_Gender'
-         ,[BirthDate] = '$U_P_BirthDate'
-         ,[Address_Line_1] = '$U_P_Address_Line_1'
-         ,[Address_Line_2] = '$U_P_Address_Line_2'
-         ,[Zipcode] = '$U_P_Zipcode'
-         ,[City] = '$U_P_City'
-         ,[Country] = '$U_P_Country'
-         ,[Marital_Status] = '$U_P_Marital'
-         ,[National_Insurance_Number] = '$U_P_National_Insurance_Number'
-         ,[Account_Number] = '$U_P_Account_Number'
-         ,[Enterprise_Email] = '$U_P_Enterprise_Email'
-         ,[Contact_Person_Name] = '$U_P_Contact_Person_Name'
-         ,[Contact_Person_Phone] = '$U_P_Contact_Person_Phone'
-        WHERE [UserID] = '$UserID'";
+      $sql = "EXEC [Users].[sp_Update_User_Info] '$UserID', '$U_P_Date', '$U_P_FirstName', '$U_P_LastName', '$U_P_Email', '$U_P_Phone', '$U_P_Gender', '$U_P_BirthDate', 
+      '$U_P_Address_Line_1', '$U_P_Address_Line_2' , '$U_P_Zipcode', '$U_P_City', '$U_P_Country', '$U_P_Marital', '$U_P_National_Insurance_Number', '$U_P_Account_Number', 
+      '$U_P_Enterprise_Email', '$U_P_Contact_Person_Name', '$U_P_Contact_Person_Phone'";
       $conn->exec($sql);
       header("Location: page-profile2.php?rd=200");
     } 
