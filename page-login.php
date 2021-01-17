@@ -74,26 +74,28 @@ if(isset($_GET['email'])) {
 </body>
 </html>
 <?php
-    if($_GET["rd"] == "2000")
-    {   
-        session_start();
-        session_unset();
-        session_destroy();
-        echo '<script>swal("Oops...", "Your account has not yet been activated. Please do this first!", "error");</script>';
-    }
-    else if($_GET["rd"] == "9000")
-    {   
-        session_start();
-        session_unset();
-        session_destroy();
-        echo '<script>swal("Good job!", "You have been successfully logged out!", "success");</script>';
-    }
-    else if($_GET["rd"] == "1300")
-    {   
-        session_start();
-        session_unset();
-        session_destroy();
-        echo '<script>swal("Oops...", "It looks like your account has been blocked or deleted. Please contact us!", "error");</script>';
+    if(isset($_GET['rd'])) {
+        if($_GET["rd"] == "2000")
+        {   
+            session_start();
+            session_unset();
+            session_destroy();
+            echo '<script>swal("Oops...", "Your account has not yet been activated. Please do this first!", "error");</script>';
+        }
+        else if($_GET["rd"] == "9000")
+        {   
+            session_start();
+            session_unset();
+            session_destroy();
+            echo '<script>swal("Good job!", "You have been successfully logged out!", "success");</script>';
+        }
+        else if($_GET["rd"] == "1300")
+        {   
+            session_start();
+            session_unset();
+            session_destroy();
+            echo '<script>swal("Oops...", "It looks like your account has been blocked or deleted. Please contact us!", "error");</script>';
+        }
     }
     session_start();
     include_once('settings/db.php');

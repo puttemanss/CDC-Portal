@@ -1,8 +1,11 @@
+<?php
+include('acc-check.php');
+?>
 <!doctype html>
 <html lang="en">
 
 <head>
-<title>:: Lucid HR :: Home</title>
+<title>:: CDR HR :: Home</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -35,109 +38,7 @@
 
 <div id="wrapper">
 
-    <nav class="navbar navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-btn">
-                <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
-            </div>
-
-            <div class="navbar-brand">
-                <a href="index.php"><img src="assets/images/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>                
-            </div>
-            
-            <div class="navbar-right">
-                <form id="navbar-search" class="navbar-form search-form">
-                    <input value="" class="form-control" placeholder="Search here..." type="text">
-                    <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
-                </form>               
-
-                <div id="navbar-menu">
-                    <ul class="nav navbar-nav">                        
-                        <li><a href="app-events.php" class="icon-menu d-none d-sm-block d-md-none d-lg-block"><i class="icon-calendar"></i></a></li>
-                        <li><a href="app-chat.php" class="icon-menu d-none d-sm-block"><i class="icon-bubbles"></i></a></li>
-                        <li><a href="app-inbox.php" class="icon-menu d-none d-sm-block"><i class="icon-envelope"></i><span class="notification-dot"></span></a></li>
-                        <li class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
-                                <i class="icon-bell"></i>
-                                <span class="notification-dot"></span>
-                            </a>
-                            <ul class="dropdown-menu notifications animated shake">
-                                <li class="header"><strong>You have 4 new Notifications</strong></li>
-                                <li>
-                                    <a href="javascript:void(0);">
-                                        <div class="media">
-                                            <div class="media-left">
-                                                <i class="icon-info text-warning"></i>
-                                            </div>
-                                            <div class="media-body">
-                                                <p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
-                                                <span class="timestamp">10:00 AM Today</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>                               
-                                <li>
-                                    <a href="javascript:void(0);">
-                                        <div class="media">
-                                            <div class="media-left">
-                                                <i class="icon-like text-success"></i>
-                                            </div>
-                                            <div class="media-body">
-                                                <p class="text">Your New Campaign <strong>Holiday Sale</strong> is approved.</p>
-                                                <span class="timestamp">11:30 AM Today</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                 <li>
-                                    <a href="javascript:void(0);">
-                                        <div class="media">
-                                            <div class="media-left">
-                                                <i class="icon-pie-chart text-info"></i>
-                                            </div>
-                                            <div class="media-body">
-                                                <p class="text">Website visits from Twitter is 27% higher than last week.</p>
-                                                <span class="timestamp">04:00 PM Today</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">
-                                        <div class="media">
-                                            <div class="media-left">
-                                                <i class="icon-info text-danger"></i>
-                                            </div>
-                                            <div class="media-body">
-                                                <p class="text">Error on website analytics configurations</p>
-                                                <span class="timestamp">Yesterday</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="footer"><a href="javascript:void(0);" class="more">See all notifications</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown"><i class="icon-equalizer"></i></a>
-                            <ul class="dropdown-menu user-menu menu-icon animated bounceIn">
-                                <li class="menu-heading">ACCOUNT SETTINGS</li>
-                                <li><a href="javascript:void(0);"><i class="icon-note"></i> <span>Basic</span></a></li>
-                                <li><a href="javascript:void(0);"><i class="icon-equalizer"></i> <span>Preferences</span></a></li>
-                                <li><a href="javascript:void(0);"><i class="icon-lock"></i> <span>Privacy</span></a></li>
-                                <li><a href="javascript:void(0);"><i class="icon-bell"></i> <span>Notifications</span></a></li>
-                                <li class="menu-heading">BILLING</li>
-                                <li><a href="javascript:void(0);"><i class="icon-credit-card"></i> <span>Payments</span></a></li>
-                                <li><a href="javascript:void(0);"><i class="icon-printer"></i> <span>Invoices</span></a></li>                                
-                                <li><a href="javascript:void(0);"><i class="icon-refresh"></i> <span>Renewals</span></a></li>
-                            </ul>
-                        </li>
-                        <li><a href="page-login.php" class="icon-menu"><i class="icon-login"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <?php include_once('navigation.php');?>
 
     <div id="left-sidebar" class="sidebar">
         <div class="sidebar-scroll">
@@ -148,27 +49,13 @@
                     <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Jessica Doe</strong></a>                    
                     <ul class="dropdown-menu dropdown-menu-right account animated flipInY">
                         <li><a href="page-profile2.php"><i class="icon-user"></i>My Profile</a></li>
-                        <li><a href="app-inbox.php"><i class="icon-envelope-open"></i>Messages</a></li>
+                        <!--<li><a href="app-inbox.php"><i class="icon-envelope-open"></i>Messages</a></li>-->
                         <li><a href="javascript:void(0);"><i class="icon-settings"></i>Settings</a></li>
                         <li class="divider"></li>
-                        <li><a href="page-login.php"><i class="icon-power"></i>Logout</a></li>
+                        <li><a href="page-login.php?rd=9000"><i class="icon-power"></i>Logout</a></li>
                     </ul>
                 </div>
                 <hr>
-                <div class="row">
-                    <div class="col-4">
-                        <h6>5+</h6>
-                        <small>Experience</small>                        
-                    </div>
-                    <div class="col-4">
-                        <h6>400+</h6>
-                        <small>Employees</small>                        
-                    </div>
-                    <div class="col-4">                        
-                        <h6>80+</h6>
-                        <small>Clients</small>
-                    </div>
-                </div>
             </div>
             <!-- Nav tabs -->
             <ul class="nav nav-tabs">
@@ -184,10 +71,10 @@
                     <nav class="sidebar-nav">
                         <ul class="main-menu metismenu">
                             <li class="active"><a href="index.php"><i class="icon-speedometer"></i><span>HR Dashboard</span></a></li>
-                            <li><a href="app-holidays.php"><i class="icon-list"></i>Holidays</a></li>
+                            <!--<li><a href="app-holidays.php"><i class="icon-list"></i>Holidays</a></li>
                             <li><a href="app-events.php"><i class="icon-calendar"></i>Events</a></li>
                             <li><a href="app-activities.php"><i class="icon-badge"></i>Activities</a></li>
-                            <li><a href="app-social.php"><i class="icon-globe"></i>HR Social</a></li>
+                            <li><a href="app-social.php"><i class="icon-globe"></i>HR Social</a></li>-->
                             <li>
                                 <a href="#Employees" class="has-arrow"><i class="icon-users"></i><span>Employees</span></a>
                                 <ul>
@@ -212,7 +99,7 @@
                                     <li><a href="payroll-salary.php">Employee Salary</a></li>                                    
                                 </ul>
                             </li>
-                            <li>
+                            <!--<li>
                                 <a href="#Report" class="has-arrow"><i class="icon-bar-chart"></i><span>Report</span></a>
                                 <ul>
                                     <li><a href="report-expense.php">Expense Report</a></li>
@@ -232,7 +119,7 @@
                                     <li><a href="page-500.php">Page 500</a></li>
                                     <li><a href="page-503.php">Page 503</a></li>
                                 </ul>
-                            </li>
+                            </li>-->
                         </ul>
                     </nav>
                 </div>
@@ -471,29 +358,6 @@
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ul>
                     </div>            
-                    <div class="col-lg-6 col-md-4 col-sm-12 text-right">
-                        <div class="bh_chart hidden-xs">
-                            <div class="float-left m-r-15">
-                                <small>Visitors</small>
-                                <h6 class="mb-0 mt-1"><i class="icon-user"></i> 1,784</h6>
-                            </div>
-                            <span class="bh_visitors float-right">2,5,1,8,3,6,7,5</span>
-                        </div>
-                        <div class="bh_chart hidden-sm">
-                            <div class="float-left m-r-15">
-                                <small>Visits</small>
-                                <h6 class="mb-0 mt-1"><i class="icon-globe"></i> 325</h6>
-                            </div>
-                            <span class="bh_visits float-right">10,8,9,3,5,8,5</span>
-                        </div>
-                        <div class="bh_chart hidden-sm">
-                            <div class="float-left m-r-15">
-                                <small>Chats</small>
-                                <h6 class="mb-0 mt-1"><i class="icon-bubbles"></i> 13</h6>
-                            </div>
-                            <span class="bh_chats float-right">1,8,5,6,2,4,3,2</span>
-                        </div>
-                    </div>
                 </div>
             </div>
 
